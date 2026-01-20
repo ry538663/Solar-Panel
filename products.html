@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - SolarTech Solutions</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container flex flex-between align-center">
+            <div class="logo">
+                <a href="index.html">
+                    <h2>Solar<span style="color:var(--primary-color)">Tech</span></h2>
+                </a>
+            </div>
+            <nav class="nav">
+                <ul class="flex">
+                    <li><a href="index.html" style="margin-left: 20px;">Home</a></li>
+                    <li><a href="products.html"
+                            style="margin-left: 20px; font-weight: bold; color: var(--primary-color);">Products</a></li>
+                    <li><a href="services.html" style="margin-left: 20px;">Services</a></li>
+                    <li><a href="projects.html" style="margin-left: 20px;">Projects</a></li>
+                    <li><a href="contact.html" style="margin-left: 20px;">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cta">
+                <a href="contact.html" class="btn btn-primary">Get Free Quote</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header" style="background-color: var(--light-bg); padding: 60px 0; text-align: center;">
+            <div class="container">
+                <h1>Solar Products</h1>
+                <p>High-efficiency panels, advanced inverters, and reliable batteries.</p>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="section" style="padding: 60px 0;">
+            <div class="container">
+
+                <!-- Filters -->
+                <div class="filters text-center" style="margin-bottom: 40px;">
+                    <button class="btn btn-primary filter-btn" style="margin: 5px;" data-filter="all">All</button>
+                    <button class="btn btn-secondary filter-btn" style="margin: 5px;" data-filter="panels">Solar
+                        Panels</button>
+                    <button class="btn btn-secondary filter-btn" style="margin: 5px;"
+                        data-filter="inverters">Inverters</button>
+                    <button class="btn btn-secondary filter-btn" style="margin: 5px;"
+                        data-filter="batteries">Batteries</button>
+                    <button class="btn btn-secondary filter-btn" style="margin: 5px;"
+                        data-filter="structures">Structures</button>
+                </div>
+
+                <!-- Product Grid -->
+                <div class="grid"
+                    style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px;">
+
+                    <!-- Product 1: Panel -->
+                    <div class="product-card"
+                        style="border: 1px solid #eee; border-radius: 10px; overflow: hidden; transition: box-shadow 0.3s;">
+                        <div class="product-img" style="height: 200px; overflow: hidden;">
+                            <img src="assets/images/products/panel-tata.png" alt="Tata Solar Panel"
+                                style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="product-info" style="padding: 20px;">
+                            <span class="badge"
+                                style="background: #e3f2fd; color: var(--primary-color); padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">Monocrystalline</span>
+                            <h3 style="margin: 10px 0; font-size: 1.2rem;">Tata Power Solar 550W</h3>
+                            <ul style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 15px;">
+                                <li>Efficiency: 21.5%</li>
+                                <li>Warranty: 25 Years</li>
+                                <li>Brand: Tata Power</li>
+                            </ul>
+                            <div class="price" style="font-weight: 700; font-size: 1.1rem; margin-bottom: 15px;">₹16,000
+                                - ₹18,000</div>
+                            <a href="contact.html?product=tata-550w" class="btn btn-primary"
+                                style="width: 100%; text-align: center;">Enquire Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Product 2: Inverter -->
+                    <div class="product-card"
+                        style="border: 1px solid #eee; border-radius: 10px; overflow: hidden; transition: box-shadow 0.3s;">
+                        <div class="product-img" style="height: 200px; overflow: hidden;">
+                            <img src="assets/images/products/inverter-luminous.png" alt="Luminous Inverter"
+                                style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="product-info" style="padding: 20px;">
+                            <span class="badge"
+                                style="background: #fff3e0; color: var(--accent-color); padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">On-Grid</span>
+                            <h3 style="margin: 10px 0; font-size: 1.2rem;">Luminous 5kW Inverter</h3>
+                            <ul style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 15px;">
+                                <li>Efficiency: 98%</li>
+                                <li>Warranty: 5 Years</li>
+                                <li>Brand: Luminous</li>
+                            </ul>
+                            <div class="price" style="font-weight: 700; font-size: 1.1rem; margin-bottom: 15px;">₹45,000
+                                - ₹50,000</div>
+                            <a href="contact.html?product=luminous-5kw" class="btn btn-primary"
+                                style="width: 100%; text-align: center;">Enquire Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Product 3: Battery -->
+                    <div class="product-card"
+                        style="border: 1px solid #eee; border-radius: 10px; overflow: hidden; transition: box-shadow 0.3s;">
+                        <div class="product-img" style="height: 200px; overflow: hidden;">
+                            <img src="assets/images/products/battery-exide.png" alt="Exide Battery"
+                                style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="product-info" style="padding: 20px;">
+                            <span class="badge"
+                                style="background: #e8f5e9; color: green; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">Lithium-Ion</span>
+                            <h3 style="margin: 10px 0; font-size: 1.2rem;">Exide Solar 150Ah</h3>
+                            <ul style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 15px;">
+                                <li>Type: Tubular / Li-ion</li>
+                                <li>Warranty: 3-5 Years</li>
+                                <li>Brand: Exide</li>
+                            </ul>
+                            <div class="price" style="font-weight: 700; font-size: 1.1rem; margin-bottom: 15px;">₹12,000
+                                - ₹15,000</div>
+                            <a href="contact.html?product=exide-150ah" class="btn btn-primary"
+                                style="width: 100%; text-align: center;">Enquire Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Product 4: Complete System -->
+                    <div class="product-card"
+                        style="border: 1px solid #eee; border-radius: 10px; overflow: hidden; transition: box-shadow 0.3s;">
+                        <div class="product-img" style="height: 200px; overflow: hidden;">
+                            <img src="assets/images/products/system-offgrid.png" alt="Off-Grid System"
+                                style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="product-info" style="padding: 20px;">
+                            <span class="badge"
+                                style="background: #f3e5f5; color: purple; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">Combo</span>
+                            <h3 style="margin: 10px 0; font-size: 1.2rem;">3kW Off-Grid System</h3>
+                            <ul style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 15px;">
+                                <li>Includes: Panels, Inverter, Battery</li>
+                                <li>Suitable for: 2-3 BHK Home</li>
+                                <li>Subsidy Available: No</li>
+                            </ul>
+                            <div class="price" style="font-weight: 700; font-size: 1.1rem; margin-bottom: 15px;">₹1.8L -
+                                ₹2.2L</div>
+                            <a href="contact.html?product=3kw-system" class="btn btn-primary"
+                                style="width: 100%; text-align: center;">Enquire Now</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer style="background-color: var(--dark-bg); color: white; padding: 40px 0; margin-top: auto;">
+        <div class="container text-center">
+            <p>&copy; 2024 SolarTech Solutions. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

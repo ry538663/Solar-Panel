@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - SolarTech Solutions</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container flex flex-between align-center">
+            <div class="logo">
+                <a href="index.html">
+                    <h2>Solar<span style="color:var(--primary-color)">Tech</span></h2>
+                </a>
+            </div>
+            <nav class="nav">
+                <ul class="flex">
+                    <li><a href="index.html" style="margin-left: 20px;">Home</a></li>
+                    <li><a href="products.html" style="margin-left: 20px;">Products</a></li>
+                    <li><a href="services.html" style="margin-left: 20px;">Services</a></li>
+                    <li><a href="projects.html" style="margin-left: 20px;">Projects</a></li>
+                    <li><a href="contact.html"
+                            style="margin-left: 20px; font-weight: bold; color: var(--primary-color);">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cta">
+                <a href="contact.html" class="btn btn-primary">Get Free Quote</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header" style="background-color: var(--light-bg); padding: 60px 0; text-align: center;">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p>Get in touch for a free site survey or consultation.</p>
+            </div>
+        </section>
+
+        <section class="section" style="padding: 60px 0;">
+            <div class="container flex flex-between" style="gap: 50px; flex-wrap: wrap;">
+
+                <!-- Contact Form -->
+                <div class="contact-form" style="flex: 1; min-width: 300px;">
+                    <h2 style="margin-bottom: 20px;">Request a Quote</h2>
+                    <form id="quoteForm"
+                        style="background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                        <div style="margin-bottom: 15px;">
+                            <label style="display: block; margin-bottom: 5px; font-weight: 600;">Full Name</label>
+                            <input type="text" placeholder="Your Name"
+                                style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+                        </div>
+                        <div style="margin-bottom: 15px;">
+                            <label style="display: block; margin-bottom: 5px; font-weight: 600;">Phone Number</label>
+                            <input type="tel" placeholder="+91 98765 43210"
+                                style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+                        </div>
+                        <div style="margin-bottom: 15px;">
+                            <label style="display: block; margin-bottom: 5px; font-weight: 600;">Address</label>
+                            <textarea placeholder="Your Address" rows="3"
+                                style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;"></textarea>
+                        </div>
+                        <div class="flex flex-between" style="gap: 15px;">
+                            <div style="flex: 1; margin-bottom: 15px;">
+                                <label style="display: block; margin-bottom: 5px; font-weight: 600;">Requirement</label>
+                                <select style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+                                    <option>2kW System</option>
+                                    <option>3kW System</option>
+                                    <option>5kW System</option>
+                                    <option>10kW+ System</option>
+                                    <option>Bateries / Inverter Only</option>
+                                </select>
+                            </div>
+                            <div style="flex: 1; margin-bottom: 15px;">
+                                <label style="display: block; margin-bottom: 5px; font-weight: 600;">Roof Type</label>
+                                <select style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+                                    <option>RCC (Concrete)</option>
+                                    <option>Tin Shed</option>
+                                    <option>Tile Roof</option>
+                                    <option>Ground Mount</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">Submit
+                            Request</button>
+                    </form>
+                </div>
+
+                <!-- ROI Calculator -->
+                <div class="calculator"
+                    style="flex: 1; min-width: 300px; background: var(--dark-bg); color: white; padding: 30px; border-radius: 10px;">
+                    <h2 style="color: white; margin-bottom: 20px;">Savings Calculator</h2>
+                    <p style="margin-bottom: 20px;">Estimate your solar system size and savings.</p>
+
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; margin-bottom: 5px;">Monthly Electricity Bill (₹)</label>
+                        <input type="number" id="monthlyBill" placeholder="e.g. 5000"
+                            style="width: 100%; padding: 10px; border: none; border-radius: 5px;">
+                    </div>
+
+                    <button onclick="calculateSolar()" class="btn btn-secondary"
+                        style="width: 100%; margin-bottom: 20px;">Calculate</button>
+
+                    <div id="calcResult"
+                        style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 5px; display: none;">
+                        <div style="margin-bottom: 10px;">
+                            <strong>Recommended System:</strong> <span id="systemSize"
+                                style="color: var(--secondary-color); font-size: 1.2rem;">0 kW</span>
+                        </div>
+                        <div style="margin-bottom: 10px;">
+                            <strong>Approx Cost:</strong> <span id="systemCost">₹0</span>
+                        </div>
+                        <div style="margin-bottom: 10px;">
+                            <strong>Annual Savings:</strong> <span id="annualSavings" style="color: #4CAF50;">₹0</span>
+                        </div>
+                        <div style="font-size: 0.8rem; color: #ccc; margin-top: 10px;">
+                            *Estimates only. Actual cost may vary based on location and subsidy.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- WhatsApp Float -->
+        <a href="https://wa.me/919876543210" target="_blank"
+            style="position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; padding: 15px; border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.3); font-size: 24px; z-index: 2000; display: flex; align-items: center; justify-content: center; width: 60px; height: 60px;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"
+                style="width: 35px;">
+        </a>
+
+    </main>
+
+    <!-- Footer -->
+    <footer style="background-color: var(--dark-bg); color: white; padding: 40px 0; margin-top: auto;">
+        <div class="container text-center">
+            <p>&copy; 2024 SolarTech Solutions. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        function calculateSolar() {
+            const bill = document.getElementById('monthlyBill').value;
+            if (bill && bill > 0) {
+                // Simple logic: 1kW represents roughly Rs. 1000-1200 bill saving per month? 
+                // Let's assume 1kW generates 4 units/day = 120 units/month. At Rs 8/unit = Rs 960 saving.
+                // So Bill / 960 = kW needed.
+
+                const kwNeeded = Math.ceil(bill / 1000);
+                const cost = kwNeeded * 60000; // Approx 60k per kW
+                const saving = bill * 12; // Annual bill is practically the saving
+
+                document.getElementById('systemSize').innerText = kwNeeded + ' kW';
+                document.getElementById('systemCost').innerText = '₹' + (cost / 100000).toFixed(1) + ' Lakhs';
+                document.getElementById('annualSavings').innerText = '₹' + saving.toLocaleString();
+                document.getElementById('calcResult').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+
+</html>
